@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Rakibul Hasan</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a2700fa8cc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="=container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Protfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-text">
+                <p> Data Science Researcher</p>
+                <h1>Hi, I'm is <span>Rakibul</span> <br> Hasan From Bangladesh</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+
+
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title"> About Me</h1>
+                    <p><br>I recently graduated in Computer Science and Engineering from North South
+                        University. My senior project in Quantum cryptography ignited my interest in
+                        the field. Additionally, my thesis on Natural Language Processing and coursework
+                        in Machine Learning and Deep Learning provided a solid foundation.
+                        As a project assistant, I’m developed a software for children with disabilities,
+                        aiming to enhance information accessibility for their parents or guardians.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Data Science</span><br>Scrutinising data using specialist tools</li>
+                                <li><span>Web Development</span><br>Full stack web application development</li>
+                                <li><span>App Development</span><br>Building Android Application</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Application Developer</span><br>Built android application</li>
+                                <li><span>Research</span><br>Quantum cryptography, Natural language processing</li>
+                                <li><span>Right To Peace</span><br>Executive Member, IT and Creative Designing.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2019-2023</span><br>North South University</li>
+                                <li><span>2016-2018</span><br>Dhaka Residential Model College</li>
+                                <li><span>2012-2016</span><br>Milestone College</li>
+                            </ul>
+                        </div>
+                        
+                       
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------------------------->
+    <div class="services">
+        <div class="container">
+            <h1 class="sub-title"> My Past Work</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>
+                        Research
+                    </h2>
+                    <p> I have done few projects on web device-width</p>
+                    <a href="#">learnmore</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>
+
+                        Web Development
+                    </h2>
+                    <p> I have done few projects on web device-width</p>
+                    <a href="#">learnmore</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h2>
+                        App
+                    </h2>
+                    <p> I have done few projects on web device-width</p>
+                    <a href="#">learnmore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname)
+        {
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
