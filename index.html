@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a2700fa8cc.js" crossorigin="anonymous"></script>
 </head>
-html{
-    scroll-behavior: smooth;
-}
+
 <body>
     <div id="header">
         <div class="=container">
@@ -82,6 +80,7 @@ html{
         </div>
     </div>
     <!----------------------------->
+    <div id="services">
     <div class="services">
         <div class="container">
             <h1 class="sub-title"> My Past Work</h1>
@@ -114,7 +113,9 @@ html{
             </div>
         </div>
     </div>
+    </div>
     <!--------Portfolio------------------------->
+    <div id="portfolio">
     <div class="portfolio">
         <div class="container">
             <h1 class="sub-title"> My Work</h1>
@@ -150,7 +151,9 @@ html{
         </div>
 
     </div>
+    </body>
     <!---------------------------Contact------------------>
+    <div id="contact">
     <div class="contact">
         <div class="container">
             <div class="row">
@@ -160,23 +163,25 @@ html{
                     <p><i class="fa-solid fa-phone"></i>01620680352</p>
                     <div class="social-icons">
                         <a href="https://www.facebook.com/rakibpsp/"><i class="fa-brands fa-facebook"></i> </a>
-                        <a href=""><i class="fa-brands fa-linkedin"></i> </a>
-                        <a href=""><i class="fa-brands fa-github"></i> </a>
-                        <a href=""><i class="fa-brands fa-google-scholar"></i> </a>
+                        <a href="https://www.linkedin.com/in/mohammed-rakibul-hasan-936b61216/"><i class="fa-brands fa-linkedin"></i> </a>
+                        <a href="https://github.com/Remian-9080"><i class="fa-brands fa-github"></i> </a>
+                        <a href="https://scholar.google.com/citations?user=DczONVsAAAAJ&hl=en"><i class="fa-brands fa-google-scholar"></i> </a>
                     </div>
                     <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
 
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class=" btn btn2">Submit</button>
                     </form>
+                    <span id="msg"></span>
                     
                 </div>
             </div>
+        </div>
         </div>
         <div class="copyright">
             <p>copyright @Rakib. Made with <i class="fas fa-heart"></i> by Easy Tutorial </p>
@@ -211,5 +216,25 @@ html{
         }
 
     </script>
+    
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxvzrpMaqWWYZlM8VOKSjqc0OPgKNdcsgtib-eredWM-daGmTfpanIvcRiGSsAW71uZXA/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message ssnt successfully"
+            setTimeout(function()
+            {
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>

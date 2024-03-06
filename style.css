@@ -4,6 +4,9 @@
     font-family: 'poppins', sans-serif;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body
 {
 background: black;
@@ -187,7 +190,7 @@ flex-basis: 35%;
 
 }
 .services-list div:hover{
-    background: #1f6a46;
+    background: #246d67;
     transform: translateY(-10px);
 }
 /*--------portfolio-----------------*/
@@ -215,7 +218,7 @@ flex-basis: 35%;
 {
 width: 100%;
 height: 0;
-background: linear-gradient(rgba(0,0,0,0.6), #1f6a46);
+background: linear-gradient(rgba(0,0,0,0.6), #0bf3df);
 border-radius: 10px;
 position: absolute;
 left: 0;
@@ -257,14 +260,14 @@ transition: height 0.5s;
     display: block;
     margin: 50px auto;
     width:fit-content;
-    border: 1px solid #1f6a46;
+    border: 1px solid #246d67;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
     color: white;
 }
 .btn:hover{
-    background: #1f6a46;
+    background: #246d67;
 }
 
 /* -------------------Contact--------- */
@@ -397,4 +400,9 @@ nav .fas{
     .copyright{
         font-size: 14px;
     }
+}
+#msg{
+    color: #0bf3df;
+    margin-top: -20px;
+    display: block;
 }
