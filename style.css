@@ -110,6 +110,8 @@ flex-basis: 35%;
 {
     display: flex;
     margin: 20px 0 40px;
+    color: #fff;
+    
 }
 .tab-links
 {
